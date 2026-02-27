@@ -10,8 +10,8 @@
 
 @mixin flex-all-center {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 @mixin flex-justify-between {
@@ -36,4 +36,3 @@
   align-items: center;
   justify-content: center;
 }
-
