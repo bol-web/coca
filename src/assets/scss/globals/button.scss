@@ -1,0 +1,16 @@
+@use '../base/vars.scss' as *;
+
+.button {
+  &-form {
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    transition: opacity var(--transition);
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
