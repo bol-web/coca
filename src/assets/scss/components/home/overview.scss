@@ -83,8 +83,9 @@
   &__descr,
   &__title,
   &__item-title {
-    @include tablet;
-    margin-right: auto;
-    margin-left: auto;
+    @include tablet {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 }
