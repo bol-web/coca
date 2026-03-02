@@ -1,4 +1,5 @@
 @use '../base/vars.scss' as *;
+@use '../mixins/media.scss' as *;
 
 .button {
   &-form {
@@ -8,6 +9,10 @@
     line-height: 150%;
     text-align: center;
     transition: opacity var(--transition);
+
+    @include mobile {
+      font-size: 14px;
+    }
 
     &:hover {
       opacity: 0.9;

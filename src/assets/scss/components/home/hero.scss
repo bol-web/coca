@@ -10,7 +10,7 @@
   }
 
   @include mobile {
-    min-width: calc(100dvh - 128px);
+    min-height: calc(100dvh - 109px);
   }
 
   &::before {
@@ -77,7 +77,9 @@
   }
 
   &__left {
-    max-width: 599px;
+    @include mini-desktop {
+      max-width: 617px;
+    }
   }
 
   &__title {
@@ -111,8 +113,10 @@
   &__subtitle {
     margin-bottom: 69px;
 
-    @include small-tablet {
-      margin-bottom: 40px;
+    & br {
+      @include mini-desktop {
+        display: none;
+      }
     }
   }
 
@@ -244,10 +248,11 @@
     }
 
     &-body {
-      &-th {
+      &-td {
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;
+        white-space: nowrap;
         color: #fff;
 
         &:nth-child(1) {
