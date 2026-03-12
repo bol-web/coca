@@ -1,0 +1,55 @@
+@use '../../mixins/flex.scss' as *;
+@use '../../mixins/media.scss' as *;
+
+.powerful {
+  &::before {
+    top: -509px;
+  }
+
+  &__container {
+    gap: 20px;
+    border-top: 1px solid var(--neutral-color-30);
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding: 85px 0;
+
+    @include flex-all-between;
+
+    @include tablet {
+      flex-direction: column;
+      padding: 55px 0;
+    }
+  }
+
+  &__title {
+    max-width: 480px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      max-width: 580px;
+      text-align: center;
+    }
+  }
+
+  &__descr {
+    max-width: 440px;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      max-width: 680px;
+      text-align: center;
+    }
+
+    @include mobile {
+      max-width: 340px;
+    }
+
+    @include small-mobile {
+      max-width: 280px;
+
+    }
+  }
+}
