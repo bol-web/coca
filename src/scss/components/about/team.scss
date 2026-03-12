@@ -1,0 +1,132 @@
+@use '../../mixins/flex.scss' as *;
+@use '../../mixins/media.scss' as *;
+
+.team {
+  padding: 160px 0;
+
+  @include mobile {
+    padding: 80px 0;
+  }
+
+  &__head {
+    &-title {
+      margin-bottom: 24px;
+      max-width: 694px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      margin-bottom: 60px;
+      max-width: 504px;
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+  }
+
+  &__slider {
+    margin-bottom: 100px;
+
+    @include mobile {
+      margin-bottom: 70px;
+    }
+
+    @include small-mobile {
+        margin-bottom: 50px;
+    }
+
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 33.7%;
+      left: 33%;
+      z-index: var(--z-index-2);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include mini-desktop {
+        display: none;
+      }
+
+      @include mobile {
+        top: 2%;
+        left: 88%;
+        display: flex;
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  &__member {
+    max-width: 379px;
+
+    &-wrapper {
+      @include flex-justify-between;
+    }
+
+    &-img {
+      margin-bottom: 16px;
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 600;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+    }
+
+    &-position {
+      font-weight: 500;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+    }
+
+    &-socials {
+      display: flex;
+      gap: 8px;
+
+      &-link {
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        background-color: var(--neutral-color-150);
+
+        @include flex-all-center;
+      }
+    }
+  }
+
+  &__join {
+    @include flex-all-between;
+
+    @include tablet {
+      gap: 24px;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &-title {
+      max-width: 626px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      max-width: 482px;
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+
+      @include mini-desktop {
+        max-width: 382px;
+      }
+    }
+  }
+}

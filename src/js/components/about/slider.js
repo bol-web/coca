@@ -14,3 +14,16 @@ export const useBrandPhilosophySlider = () => {
     },
   });
 };
+
+export const useTeamSlider = () => {
+  new Swiper('.team__slider', {
+    spaceBetween: 32,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    breakpoints: {
+      993: {
+        centeredSlides: false,
+      },
+    },
+  });
+};

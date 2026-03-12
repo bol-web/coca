@@ -6,6 +6,19 @@
   overflow-x: hidden;
   padding-bottom: 165px;
 
+  @include tablet {
+    padding-bottom: 145px;
+  }
+
+  @include mobile {
+    padding-bottom: 80px;
+  }
+
+  @include small-mobile {
+    padding-bottom: 50px;
+
+  }
+
   &__slider {
     position: relative;
     overflow: visible;
