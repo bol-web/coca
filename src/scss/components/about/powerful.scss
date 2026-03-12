@@ -6,6 +6,20 @@
     top: -509px;
   }
 
+  &::after {
+    bottom: -531px;
+  }
+
+  @include small-tablet {
+    &::before {
+      top: -309px;
+    }
+
+    &::after {
+      bottom: -331px;
+    }
+  }
+
   &__container {
     gap: 20px;
     border-top: 1px solid var(--neutral-color-30);
@@ -49,7 +63,6 @@
 
     @include small-mobile {
       max-width: 280px;
-
     }
   }
 }
