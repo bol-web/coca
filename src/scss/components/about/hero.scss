@@ -14,7 +14,8 @@
     align-items: flex-end;
 
     @include tablet {
-      @include flex-column-all-center;
+      @include flex-all-center;
+      flex-direction: column;
     }
   }
 
