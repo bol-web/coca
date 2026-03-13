@@ -1,0 +1,60 @@
+@use '../../mixins/flex.scss' as *;
+@use '../../mixins/media.scss' as *;
+
+.features {
+  padding: 120px 0;
+  background-color: var(--black-bg-color);
+
+  @include small-mobile {
+    padding: 80px 0;
+  }
+
+  &__articlest {
+    display: flex;
+    gap: 32px;
+
+    @include mobile {
+      gap: 69px;
+      flex-direction: column;
+    }
+
+    &-column {
+      display: flex;
+      gap: 159px;
+      flex-direction: column;
+
+      @include tablet {
+        gap: 89px;
+      }
+
+      @include mobile {
+        gap: 69px;
+      }
+    }
+  }
+
+  &__item {
+    max-width: 584px;
+
+    &-img {
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 600;
+      line-height: 120%;
+      color: #fff;
+
+      &--underline {
+        text-decoration: underline;
+      }
+    }
+
+    &-descr {
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+  }
+}
