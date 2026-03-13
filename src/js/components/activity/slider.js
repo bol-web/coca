@@ -15,3 +15,23 @@ export const useBlogSlider = () => {
     },
   });
 };
+
+export const useArticlesSlider = () => {
+  new Swiper('.articles__slider', {
+    modules: [Navigation],
+    slidesPerView: 'auto',
+    spaceBetween: 32,
+    centeredSlides: true,
+    
+    navigation: {
+      prevEl: '.articles__btn--prev',
+      nextEl: '.articles__btn--next',
+    },
+
+    breakpoints: {
+      1201: {
+        centeredSlides: false,
+      },
+    },
+  });
+};

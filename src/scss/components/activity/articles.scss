@@ -1,0 +1,129 @@
+@use '../../mixins/flex.scss' as *;
+@use '../../mixins/media.scss' as *;
+
+.articles {
+  overflow-x: hidden;
+  padding: 160px 0;
+
+  @include mobile {
+    padding: 100px 0;
+  }
+
+  &__head {
+    position: relative;
+    margin-bottom: 80px;
+
+    @include flex-all-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__descr {
+    max-width: 379px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btns {
+    @include flex-align-center;
+    gap: 16px;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition:
+      background-color var(--transition),
+      border-color var(--transition);
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    & svg path {
+      transition: fill var(--transition);
+    }
+
+    &:hover {
+      border-color: var(--neutral-color-100);
+      background-color: var(--neutral-color-100);
+
+      & svg path {
+        fill: var(--neutral-color-10);
+      }
+    }
+
+    &--next {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__slider {
+    &.swiper {
+      overflow: visible;
+    }
+  }
+
+  &__slide {
+    margin-right: 0;
+    max-width: 405px;
+
+    &-img {
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 131%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+
+    &-link {
+      display: inline-block;
+      border: 1px solid var(--neutral-color-40);
+      padding: 16px 45px;
+      font-weight: 700;
+      text-align: center;
+      color: var(--neutral-color-100);
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
